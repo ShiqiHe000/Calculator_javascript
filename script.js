@@ -139,9 +139,18 @@ function startOutputButton(){
         } catch (error) {
             return;
         }
+
+        fireOperandAnimation(currentOperand);
+        fireOperandAnimation(previousOperand);
     
         showResult(result);
     })
+}
+
+function fireOperandAnimation(operand){
+    operand.style.animation = 'none';
+    operand.offsetHeight;    // trigger reflow
+    operand.style.animation = null;
 }
 
 function twoDecimalPrecision(num){

@@ -4,6 +4,7 @@
     font-weight: normal;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -22,6 +23,7 @@ body {
     grid-template-rows: minmax(110px, auto) repeat(5, var(--calculator-button-size));
 }
 
+
 .output {
     padding: 1rem;
     grid-column: span 4;
@@ -34,9 +36,11 @@ body {
     justify-content: space-around;
 }
 
+
 .output .previous-operand {
     color: hsl(0, 0%, 75%);
     font-size: 1.5rem;
+    
 }
 
 .output .current-operand {
@@ -45,9 +49,29 @@ body {
 
 }
 
+.output .previous-operand,
+.output .current-operand {
+    animation: amplify-font .5s;
+
+}
+
+
+@keyframes amplify-font {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 .calculator-grid button {
     background-color: rgba(229, 204, 255, 70%);
-    /* height: 60px; */
     font-size: 1.8rem;
     outline: none;
     border: 1px solid white;
@@ -61,3 +85,4 @@ body {
 .span-two {
     grid-column: span 2;
 }
+
