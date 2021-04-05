@@ -55,6 +55,9 @@ function startDecimalPoint(){
             showCurrAndPre();
             hasResult = false;
         }
+
+        if(inputString.charAt(inputString.length-1) === '.') return;
+
         inputString += '.';
         showCurrentOperand('.');
     })
