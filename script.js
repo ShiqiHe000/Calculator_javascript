@@ -1,9 +1,5 @@
 const numberButtons = document.querySelectorAll('[data-number]');
 
-// const divide = document.getElementById('divide');
-// const multiply = document.getElementById('multiply');
-// const plus = document.getElementById('plus');
-// const minus = document.getElementById('minus');
 const equal = document.getElementById('equal');
 const decimalPoint = document.getElementById('decimal-point');
 
